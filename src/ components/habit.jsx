@@ -25,6 +25,7 @@ class Habit extends Component {
         >
           <i className='fas fa-plus-square'></i>
         </button>
+        <button
           className='habit-button habit-decrease'
           onClick={this.handleDecrement}
         >
