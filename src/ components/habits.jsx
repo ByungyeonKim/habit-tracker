@@ -6,7 +6,7 @@ class Habits extends Component {
   render() {
     return (
       <>
-      <HabitAddForm />
+      <HabitAddForm onAdd={this.props.onAdd}/>
       <ul>
         {this.props.habits.map((habit) => (
           <Habit
@@ -18,6 +18,7 @@ class Habits extends Component {
           />
         ))}
       </ul>
+      <button className="habits-reset" onClick={this.props.onReset}>Reset All</button>
       </>
     );
   }
