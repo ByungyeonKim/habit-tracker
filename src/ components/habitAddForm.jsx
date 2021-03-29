@@ -13,7 +13,7 @@ class HabitAddForm extends Component {
 
   render() {
     return (
-    <form ref={this.formRef} className="add=form" onSubmit={this.onSubmit}>
+    <form ref={this.formRef} className="add-form" onSubmit={this.onSubmit}>
       <input 
         ref={this.inputRef}
         type="text" 
