@@ -1,6 +1,7 @@
 # 습관 만들기 😤
 
 ![habit-tracker](https://user-images.githubusercontent.com/66554164/113257439-95117180-9305-11eb-9af8-6d6863d96ea0.gif)
+[결과물을 확인해보세요. 🧑🏻‍💻](https://byungyeonkim.github.io/habit-tracker/)
 
 ### Technologies used 🛠
 
