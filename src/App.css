@@ -3,7 +3,6 @@
 /* 리셋 */
 html, body, main, footer, div, span, p, ol, ul, li, /**/
 h1, h2, h3, h4, h5, h6, em, strong, address {
-  margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
@@ -18,7 +17,6 @@ ul {
 }
 
 body {
-  font-family: '나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif;
   line-height: 1;
   background-color: ghostwhite;
 }
@@ -26,50 +24,52 @@ body {
 /* 헤더 */
 header {
   background-color: azure;
-  height: 68px;
+  height: 4.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
+  cursor: default;
 }
 
 .header-logo {
   color: cadetblue;
-  margin-right: 12px;
+  margin-right: 0.75em;
 }
 
 .header-count {
   background-color: cornflowerblue;
-  height: 32px;
-  width: 32px;
+  height: 2rem;
+  width: 2rem;
   font-size: 1.5rem;
-  line-height: 16px;
+  line-height: 1rem;
   text-align: center;
   color: white;
   border-radius: 50%;
   padding: 0.5rem;
-  margin-left: 12px;
+  margin-left: 0.75rem;
 }
 
 /* Add form */
 .add-form {
   display: flex;
   justify-content: center;
-  height: 28px;
-  padding: 14px;
+  height: 1.75rem;
+  padding: 0.875rem;
 }
 
 .add-input {
-  padding: 5px;
+  padding: 0.25rem;
   border: 1px solid cornflowerblue;
   border-radius: 4px;
-  margin-right: 5px;
+  margin-right: 0.25rem;
 }
 
 .add-button {
   background-color: cadetblue;
   border-radius: 4px;
   border: none;
+  cursor: pointer;
 }
 
 /* 습관 리스트 */
@@ -78,7 +78,12 @@ header {
   flex-direction: column;
   align-items: center;
   font-size: 1.25rem;
-  min-height: 420px;
+  min-height: 26.25rem;
+}
+
+.habit,
+.habit-count {
+  cursor: default;
 }
 
 .habit {
@@ -90,18 +95,19 @@ header {
 .habit-count {
   background-color: cornflowerblue;
   text-align: center;
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
   color: white;
   border-radius: 50%;
-  margin: 0 12px;
+  margin: 0 0.75rem;
 }
 
 .habit-button {
-  height: 24px;
-  margin-right: 5px;
+  height: 1.5rem;
+  margin-right: 0.25rem;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .habit-increase {
@@ -122,9 +128,63 @@ header {
 .habits-reset {
   display: block;
   margin: auto;
-  padding: 8px;
+  padding: 0.5rem;
   background-color: cadetblue;
   color: white;
   border-radius: 4px;
   border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 48rem) {
+  .add-input {
+    font-size: 1.25rem;
+    width: 18.75rem;
+    height: 2rem;
+    padding-left: 0.5rem;
+  }
+
+  .add-button {
+    height: 2.625rem;
+    font-size: 1.25rem;
+    margin-left: 0.5rem;
+  }
+
+  .habit-list {
+    padding: 1rem;
+    max-width: 67.5rem;
+    margin: auto;
+  }
+
+  .habit {
+    font-size: 1.875rem;
+    width: 100%;
+    min-height: 5.375rem;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    border: 1px solid #d7e2eb;
+    border-radius: 0.25rem;
+  }
+
+  .habit:hover {
+    border: 1px solid cornflowerblue;
+  }
+
+  .habit-count {
+    width: 2.25rem;
+    height: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .habit-button {
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2.25rem;
+    margin-right: 0.5rem;
+  }
+
+  .habits-reset {
+    font-size: 1.5rem;
+    padding: 0.875rem;
+  }
 }
