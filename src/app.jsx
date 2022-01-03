@@ -13,8 +13,8 @@ class App extends Component {
   };
 
   handleIncrement = (habit) => {
-    const habits = this.state.habits.map(item => {
-      if(item.id === habit.id) {
+    const habits = this.state.habits.map((item) => {
+      if (item.id === habit.id) {
         return { ...habit, count: habit.count + 1 };
       }
       return item;
@@ -23,9 +23,9 @@ class App extends Component {
   };
 
   handleDecrement = (habit) => {
-    const habits = this.state.habits.map(item => {
+    const habits = this.state.habits.map((item) => {
       const count = habit.count - 1;
-      if(item.id === habit.id) {
+      if (item.id === habit.id) {
         return { ...habit, count: count < 0 ? 0 : count };
       }
       return item;
@@ -38,15 +38,15 @@ class App extends Component {
     this.setState({ habits });
   };
 
-  handleAdd = name => {
-    const habits = [...this.state.habits, {id: Date.now(), name, count: 0}];
+  handleAdd = (name) => {
+    const habits = [...this.state.habits, { id: Date.now(), name, count: 0 }];
     this.setState({ habits });
   };
 
   handleReset = () => {
-    const habits = this.state.habits.map(habit => {
-      if(habit.count !== 0) {
-        return { ...habit, count: 0};
+    const habits = this.state.habits.map((habit) => {
+      if (habit.count !== 0) {
+        return { ...habit, count: 0 };
       }
       return habit;
     });
@@ -55,19 +55,19 @@ class App extends Component {
 
   render() {
     return (
-        <>
-          <Header
-            totalCount={ this.state.habits.filter((item) => item.count > 0).length }
-          />
-          <Habits
-            habits={this.state.habits}
-            onIncrement={this.handleIncrement}
-            onDecrement={this.handleDecrement}
-            onDelete={this.handleDelete}
-            onAdd={this.handleAdd}
-            onReset={this.handleReset}
-          />
-        </>
+      <>
+        <Header
+          totalCount={this.state.habits.filter((item) => item.count > 0).length}
+        />
+        <Habits
+          habits={this.state.habits}
+          onIncrement={this.handleIncrement}
+          onDecrement={this.handleDecrement}
+          onDelete={this.handleDelete}
+          onAdd={this.handleAdd}
+          onReset={this.handleReset}
+        />
+      </>
     );
   }
 }
