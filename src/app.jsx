@@ -3,7 +3,7 @@ import Habits from './ components/habits';
 import Header from './ components/header';
 import './app.css';
 
-class App extends Component {
+const App = ()=> {
   state = {
     habits: [
       { id: 1, name: '달리기', count: 0 },
